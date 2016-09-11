@@ -31,13 +31,13 @@ function send_not_found_error(res, obj) {
 function send_bad_implementation_error(res, obj) {
     var details = obj.details || {};
     var statusCode = obj.statusCode || '00000';
-    var error = errors.not_found('Bad Implementation', details, statusCode);
+    var error = errors.bad_implementation('Bad Implementation', details, statusCode);
     res.status(500).json(error);
 }
 
-function send_unauthorized_error(req, res) {
+function send_unauthorized_error(res, obj) {
     var details = obj.details || {};
     var statusCode = obj.statusCode || '00000';
-    var error = errors.not_found('Unauthorized', details, statusCode);
+    var error = errors.unauthorized('Unauthorized', details, statusCode);
     res.status(401).json(error);
 }
