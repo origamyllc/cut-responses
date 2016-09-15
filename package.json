@@ -1,6 +1,6 @@
 {
   "name": "cut-responses",
-  "version": "0.0.4dv",
+  "version": "0.0.6dv",
   "description": "",
   "main": "./cut-responses/index.js",
   "scripts": {
@@ -16,6 +16,6 @@
     "babel-register": "^6.8.0"
   },
   "dependencies": {
-    "cut-errors": "0.0.3-dv"
+    "cut-errors": "0.0.5-dv"
   }
 }
