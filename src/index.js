@@ -3,17 +3,21 @@ const _ = require('lodash');
 import Promise from 'bluebird';
 import * as errors from 'cut-errors';
 
-function  send_not_found_error(res,obj){
+export function  send_success_response(res,obj){
+    res.status(200).json(obj);
+}
+
+export function  send_not_found_error(res,obj){
     let details = obj.details || {};
     let statusCode = obj.statusCode || '00000';
     let error = errors.not_found('Resource Not Found', details,statusCode );
     res.status(404).json(error);
 }
 
-export function send_bad_implementation_error(res ,obj){
+export function send_internal_server_error(res ,obj){
     let details = obj.details || {};
     let statusCode = obj.statusCode || '00000';
-    let  error = errors.bad_implementation('Bad Implementation', details, statusCode);
+    let  error = errors.internal_server_error('Bad Implementation', details, statusCode);
     res.status(500).json(error);
 }
 
