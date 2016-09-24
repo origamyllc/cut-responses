@@ -1,6 +1,6 @@
 {
   "name": "cut-responses",
-  "version": "0.0.1rc",
+  "version": "0.0.2rc",
   "description": "",
   "main": "./bin/index.js",
   "scripts": {
